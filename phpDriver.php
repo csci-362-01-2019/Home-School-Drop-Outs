@@ -47,7 +47,10 @@ $outFile = array();
 if ($handle = opendir('./TestAutomation/testCases/tokenize/')) {
     while (false !== ($entry = readdir($handle))) {
         if ($entry != "." && $entry != "..") {
-            array_push($outFile, tokenize(getFile("./TestAutomation/testCases/tokenize/".$entry)));
+            $termToTokenize = getFile("./TestAutomation/testCases/tokenize/".$entry);
+            $newTerm = tokenize($termToTokenize);
+
+            array_push($outFile, $newTerm);
         }
     }
     closedir($handle);

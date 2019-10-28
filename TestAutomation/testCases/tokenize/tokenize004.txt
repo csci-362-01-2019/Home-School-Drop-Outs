@@ -6,4 +6,4 @@
 #Tests: "I a a fish I I"
 #Oracle: "fish"
 #Command line arguments: php phpdriver
-"I a a fish I I"
+I a a fish I I

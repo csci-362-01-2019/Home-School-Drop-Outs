@@ -6,4 +6,4 @@
 #Test: "You are  fish"
 #Oracle: "You are fish"
 #Command line arguments: php phpdriver
-"You are  fish"
+You are  fish

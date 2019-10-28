@@ -6,4 +6,3 @@
 #Test: ""
 #Oracle: ""
 #Command line arguments: php phpdriver
-""

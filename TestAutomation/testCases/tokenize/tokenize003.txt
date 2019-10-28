@@ -6,4 +6,4 @@
 #Test: "I a I a"
 #Oracle: ""
 #Command line arguments: php phpdriver
-"I a I a"
+I a I a

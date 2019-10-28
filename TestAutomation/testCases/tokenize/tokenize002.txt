@@ -6,4 +6,4 @@
 #Test: "fish fish fish"
 #Oracle: "fish"
 #Command line arguments: php phpdriver
-"fish fish fish"
+fish fish fish
