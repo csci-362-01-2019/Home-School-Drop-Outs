@@ -1,8 +1,5 @@
 <?php
 
-$inFile = "test.txt";
-
-
 function getFile($inFile)
 {
     $arrayInputs = array();
@@ -14,7 +11,7 @@ function getFile($inFile)
       array_push($arrayInputs, $fileLine);
     }
     fclose($myfile);
-    return $arrayInputs[4];
+    return $arrayInputs[0];
 }
 
 function tokenize($needle)
@@ -45,5 +42,17 @@ function tokenize($needle)
     return $tokens;
 }
 
-print(tokenize(getFile($inFile))[0]);
+$outFile = array();
+
+if ($handle = opendir('./TestAutomation/testCases/tokenize/')) {
+    while (false !== ($entry = readdir($handle))) {
+        if ($entry != "." && $entry != "..") {
+            array_push($outFile, tokenize(getFile("./TestAutomation/testCases/tokenize/".$entry)));
+        }
+    }
+    closedir($handle);
+}
+
+print_r($outFile);
+
 ?>
