@@ -11,7 +11,7 @@ function getFile($inFile)
       array_push($arrayInputs, $fileLine);
     }
     fclose($myfile);
-    return $arrayInputs[0];
+    return $arrayInputs[8];
 }
 
 function tokenize($needle)
