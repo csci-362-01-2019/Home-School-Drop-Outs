@@ -1,0 +1,17 @@
+=======================================================================
+# Testing number
+# Requirement being tested
+# Component being tested
+# Method being tested
+# Input for test cases
+# Expected output (oracle)
+
+=======================================================================
+
+018
+The tokenize method takes in a string and returns an array with the words indexed
+projects/moodle/grade/grading/lib.php
+tokenize
+~/$HOME/Desktop/CSCI362
+Array ( [0] => ~/$HOME/Desktop/CSCI362 ) 
+

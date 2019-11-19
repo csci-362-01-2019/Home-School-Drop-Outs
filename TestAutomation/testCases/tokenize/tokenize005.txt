@@ -1,8 +1,0 @@
-#Test ID: 005
-#Requirement being tested: The method should return an array of all the words passed to it as individual elements excluding one letter words and repeated words
-#Component being tested: moodle/grade/grading/lib/tokenize
-#Method being tested: tokenize()
-#To verify that the tokenize method works properly
-#Test: ""
-#Oracle: ""
-#Command line arguments: php phpdriver

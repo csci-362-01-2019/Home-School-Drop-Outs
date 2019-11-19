@@ -1,0 +1,14 @@
+=======================================================================
+# Method Number
+# Method Description
+# Name of Method
+# Location of method
+# Length of method
+
+=======================================================================
+
+201
+The tokenize method takes in a string and returns an array with the words indexed
+tokenize
+grade/grading/lib.php
+26

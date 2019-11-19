@@ -1,0 +1,1 @@
+Array ( [0] => www [1] => moodle [2] => com )
