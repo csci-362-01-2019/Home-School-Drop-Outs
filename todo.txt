@@ -1,0 +1,34 @@
+Tasks 11/20
+
+D1 needs to contain the results of moodles existing tests
+D2 needs to contain 5 test cases properly formatted how they will be input
+D3 is a slide show, format like the rest
+D4 needs to contain 25 test cases
+D5 looks like a copy of D4? Need to update with injected faults and results
+
+Add to/Edit slideshow from D3 to make final presentation
+Make Poster
+
+
+Final Report
+
+1. Prepare and submit a final document that includes the previous five chapters and
+presents in Chapter 6 your overall experiences and what you learned during the
+execution of this project. This will be a professional-grade document with a title page,
+table of contents, introduction, full explanation of the testing framework, detailed
+instructions, examples etc. You can edit together your previous submittals as chapters
+in this final report, but be sure it reads as a coherent whole. Include a section at the end
+that is a self-evaluation of your team's work. Also include a section that evaluates the
+project assignments and provides suggestions for improving them in the future. I will
+use your input to improve the delivery of CSCI 462 as well.
+
+2. Prepare and submit a printer-ready poster that presents your project. This poster should
+be entered (at your discretion) in the Spring 2020 School of Science and Math Poster
+Session.
+
+3. Prepare and submit a presentation file such as powerpoint or Prezi that you will use for
+your in-class final presentation. Plan on 20 minutes with each member speaking. Your
+presentation should explain your project, your lessons-learned and provide
+demonstrations of your framework, passing tests, and fault-injection results. There will
+be 5 minutes for questions and discussion following the 20 minute presentation. I will
+film the proceedings!
