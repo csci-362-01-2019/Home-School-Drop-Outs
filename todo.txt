@@ -1,8 +1,8 @@
 Tasks 11/20
 
 D1 needs to contain the results of moodles existing tests
-D2 needs to contain 5 test cases properly formatted how they will be input
-D3 is a slide show, format like the rest
+D2 done
+D3 done
 D4 needs to contain 25 test cases
 D5 looks like a copy of D4? Need to update with injected faults and results
 
