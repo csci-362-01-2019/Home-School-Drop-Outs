@@ -211,9 +211,8 @@ _FILE_
                 # Once the file has been created we need to update the driver to account for 
                 # the new method
 
-                # 
-
-
+            sed '/require/ a require("../TestCasesExecutables/$METHOD_NAME");' $TEST_CASE_EXECUTABLES_DIRECTORY/driver.php > $TEMP_DIRECTORY/tempDriver.php
+            cp $TEMP_DIRECTORY/tempDriver.php $TEST_CASE_EXECUTABLES_DIRECTORY/driver.php
 
 # By this point we have grabbed any new methods, read through them and saved the method to 
 # testCasesExecutables, and lastly updated the driver we can now check for new test cases
@@ -420,9 +419,11 @@ done
                                 if [ "$myVar" == "$line" ]; then
                                     # Echo pass if the oracle matches the methods output
                                     echo "PASS"
+                                    result=PASS
                                 else
                                     # Echo fail it the results do not match
                                     echo "FAIL"
+                                    result=FAIL
                                 fi
                         done < "$oracleFile"
 
@@ -431,11 +432,60 @@ done
                         showError "ORACLE FILE COULD NOT BE CREATED: ABORTING TEST CASE"
                     fi
 
+# Creates the tables in the text file
+cat <<- _FILE_ >> ../reports/table.html
+    <tr>
+        <td>$REQUIREMENT</td>
+            <td> </td>
+            <td>$TEST_CASE_NUMBER</td>
+            <td>$COMPONENT</td>
+            <td>$METHOD</td>
+            <td>$INPUT</td>
+            <td>$EXPECTED</td>
+            <td>$methodExecution</td>
+            <td>$result</td>
+    </tr>
+_FILE_
 
-                
 done
 
+# Read the text file and put into webpage template
+function readFile() 
+{
+    cat $REPORTS_DIRECTORY/table.html
+}
 
+cat <<- _FILE_ > $REPORTS_DIRECTORY/webpage.html
+    <html>
+    <head>
+        <title>
+			$title
+        </title>
+    </head>
+    <body>
+    <table class="table table-striped table-sm">
+              <thead>
+                <tr>
+                  <th>Requirement<th>
+                  <th>Id</th>
+                  <th>Component</th>
+                  <th>Method</th>
+                  <th>Input</th>
+                  <th>Expected</th>
+                  <th>Result</th>
+                  <th>Status</th>   
+                </tr>
+              </thead>
+              <tbody>
+
+                $(readFile)
+
+              </tbody>
+            </table>
+    </body>
+    </html>
+_FILE_
+xdg-open $REPORTS_DIRECTORY/webpage.html
             ;;
 
 
@@ -448,28 +498,7 @@ done
 
         "Manuel")
             echo "you chose choice $REPLY which is $opt"
-cat <<- _FILE_ > file.html
-    <html>
-    <head>
-        <title>
-			$title
-        </title>
-    </head>
-    <body>
-    <h1>My System Directory!</h1>
-    <h3>Current Session: $currentTime</h3>
-    <h4>Top Directory</h4>
-		
-    <h4>TestAutomation Directory</h4>\
-		
-		</br>
-		</br>
-	<h2>Thank you for executing my script!</h2>      #header
-    </body>
-    </html>
-_FILE_
 
-xdg-open file.html
 
             ;;
         "Quit")
