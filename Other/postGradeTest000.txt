@@ -1,6 +1,0 @@
-000
-Post grade successfully
-Component
-postGrade()
--1, cmdLineArgument
-Not a valid grade

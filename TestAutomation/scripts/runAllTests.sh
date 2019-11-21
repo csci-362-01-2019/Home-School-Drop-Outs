@@ -430,7 +430,12 @@ done
                         # If the oracle file can be created the test will be aborted
                         showError "ORACLE FILE COULD NOT BE CREATED: ABORTING TEST CASE"
                     fi
+
+
+                
 done
+
+
             ;;
 
 
@@ -443,6 +448,28 @@ done
 
         "Manuel")
             echo "you chose choice $REPLY which is $opt"
+cat <<- _FILE_ > file.html
+    <html>
+    <head>
+        <title>
+			$title
+        </title>
+    </head>
+    <body>
+    <h1>My System Directory!</h1>
+    <h3>Current Session: $currentTime</h3>
+    <h4>Top Directory</h4>
+		
+    <h4>TestAutomation Directory</h4>\
+		
+		</br>
+		</br>
+	<h2>Thank you for executing my script!</h2>      #header
+    </body>
+    </html>
+_FILE_
+
+xdg-open file.html
 
             ;;
         "Quit")
