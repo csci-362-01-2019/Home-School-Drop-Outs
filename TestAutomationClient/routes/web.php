@@ -12,8 +12,26 @@
 */
 
 Route::get('/', 'PagesController@index');
+
+
 Route::get('dashboard', 'PagesController@dashboard');
-#Route::get('/', 'PagesController@index');
+
+
+Route::get('/insert', function(){
+	$json = file_get_contents("../storage/app/template.json");
+	$objs = json_decode($json,true);
+	foreach ($objs as $obj)  {
+		foreach ($obj as $key => $value) {
+			$insertArr[str_slug($key,'_')] = $value;
+		}
+		DB::table('test_cases')->insert($insertArr);
+	}
+	dd("Finished adding data in examples table");
+});
+
+
+Route::get('/create', 'PagesController@create');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

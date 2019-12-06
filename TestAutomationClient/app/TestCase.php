@@ -8,7 +8,7 @@ class TestCase extends Model
 {
     protected $table = 'test_cases';
 
-    public $primaryKey = 'teat_case_id';
+    public $primaryKey = 'test_case_id';
 
     public $timeStamps = true;
 

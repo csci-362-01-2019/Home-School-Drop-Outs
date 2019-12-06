@@ -66,6 +66,12 @@ use \App\Http\Controllers\PagesController;
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            .moodle-logo {
+                height: 400px;
+                width: 400px;
+                padding-bottom: 40px;
+            }
         </style>
     </head>
     <body>
@@ -85,6 +91,7 @@ use \App\Http\Controllers\PagesController;
             @endif
 
             <div class="content">
+            <img class = "moodle-logo" src="https://i.ibb.co/qY8phyH/moodle-logo.png" alt="moodle-logo">
                 <div class="title m-b-md">
                     Moodle Automated Testing Framework
                 </div>

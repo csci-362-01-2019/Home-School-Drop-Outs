@@ -1,6 +1,7 @@
 <?php
 // Inset new methods to test here
 require("../testCasesExecutables/tokenize.php");
+require("../TestCasesExecutables/METHOD");
 
 // Position [0] is the script's file name
 array_shift($argv);

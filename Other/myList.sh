@@ -16,27 +16,13 @@ testAutoDirectory()
 	ls
 }
 
-cat <<- _FILE_ > file.html
-    <html>
-    <head>
-        <title>
-			$title
-        </title>
-    </head>
-    <body>
-    <h1>My System Directory!</h1>
-    <h3>Current Session: $currentTime</h3>
-    <h4>Top Directory</h4>
-		$(currentDirectory)
-    <h4>TestAutomation Directory</h4>\
-		$(testAutoDirectory)
-		</br>
-		</br>
-	<h2>Thank you for executing my script!</h2>      #header
-	<img src="./TestAutomation/img/pair-programming.gif">    #paired programming gif
-    </body>
-    </html>
+cat <<- _FILE_ > file.php
+<?php
+
+echo "HELLO!!";
+
+?>
 _FILE_
 
-xdg-open file.html
+xdg-open file.php
 
